@@ -110,7 +110,6 @@ struct coro_task {
 
     auto set_owner(throttler* owner) {
         auto result = coro_handle;
-        // printf("setting owner %p %p\n", &coro_handle.promise(), owner);
         coro_handle.promise().owner = owner;
         coro_handle = nullptr;
         return result;
