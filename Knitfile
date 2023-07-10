@@ -1,0 +1,4 @@
+return b{
+    $ main: main.cc coro.hh
+        g++ -O2 $(inputs[1]) -o $output -fcoroutines
+}
